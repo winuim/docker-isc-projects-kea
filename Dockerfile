@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 LABEL Name=kea-dhcp4-server Version=0.0.1
 
-EXPOSE 67
+EXPOSE 67:67/udp
 
 ARG DEBIAN_FRONTEND=noninteractive
 
