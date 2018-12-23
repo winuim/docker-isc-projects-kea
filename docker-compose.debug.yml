@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  docker-isc-projects-kea:
+    image: docker-isc-projects-kea
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
