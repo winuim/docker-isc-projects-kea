@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-LABEL Name=kea-dhcp4-server Version=0.0.1
 
 EXPOSE 67:67/udp
 
@@ -16,4 +15,4 @@ RUN apt update && apt install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Run
-CMD ["kea-dhcp4", "-d", "-c", "/etc/kea/kea-dhcp4.conf"]
+CMD ["kea-dhcp4", "-c", "/etc/kea/kea-dhcp4.conf"]

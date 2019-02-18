@@ -1,10 +1,11 @@
 version: '2.1'
 
 services:
-  docker-isc-projects-kea:
-    image: docker-isc-projects-kea
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
+  kea-dhcp4:
+    image: kea-dhcp4-server
+    build: .
+    volumes:
+      - ./etc/kea:/etc/kea
+    network_mode: "host"
+    stdin_open: true
+    tty: true
